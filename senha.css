@@ -1,0 +1,59 @@
+body {
+  background: #ffb6c1;
+  color: #b91c1c;
+  font-family: Arial, sans-serif;
+}
+
+/* TELA DE BLOQUEIO */
+.lock-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.lock-screen input {
+  padding: 12px;
+  width: 220px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
+
+.btn-enter {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  background: #b91c1c;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-enter:hover {
+  background: #b9311c;
+}
+
+
+
+#error {
+  color: #ef4444;
+  display: none;
+}
+
+/* CONTEÚDO */
+.hidden {
+  display: none;
+}
+
+.about {
+  padding: 100px 8%;
+}
+
+
+
+  
+

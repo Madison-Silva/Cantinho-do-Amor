@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartas do Amor 💖</title>
+  <link rel="stylesheet" href="cartas.css">
+</head>
+
+<style>
+  * {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fff0f5;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #e91e63;
+}
+
+/* ÍCONE */
+.icone-escrever {
+  background: #e91e63;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* ÁREA ESCONDIDA */
+.escondido {
+  display: none;
+}
+
+.escrever-carta input,
+.escrever-carta textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* CARTAS */
+.carta {
+  background: #fff;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.carta h3 {
+  margin: 0;
+  color: #e91e63;
+}
+
+.carta p {
+  display: none;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* MOBILE EXTRA */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+
+
+.btn-apagar {
+  margin-top: 10px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-apagar:hover {
+  background: #e60000;
+}
+
+.label-data {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.bloqueada {
+  color: #999;
+  font-style: italic;
+}
+
+.data-info {
+  font-size: 13px;
+  margin-top: 5px;
+  color: #777;
+}
+
+
+</style>
+
+
+<body>
+
+  <div class="container">
+
+    <h1>💌 Cartas do Amor</h1>
+
+    <div class="icone-escrever" onclick="alternarEscrita()" id="icone">
+      ✍️ Escrever carta
+    </div>
+
+    <!-- ÁREA ESCONDIDA -->
+    <div class="escrever-carta escondido" id="areaEscrita">
+      <input type="text" id="titulo" placeholder="Título da carta 💖">
+
+      <textarea id="mensagem" placeholder="Escreva sua carta aqui..."></textarea>
+
+      <label class="label-data">📅 Abrir somente em:</label>
+      <input type="date" id="dataAbertura">
+
+      <button onclick="salvarCarta()">Salvar carta 💌</button>
+    </div>
+
+    <div id="lista-cartas"></div>
+
+  </div>
+
+  <script src="cartas.js"></script>
+</body>
+</html>
